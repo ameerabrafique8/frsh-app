@@ -1,12 +1,12 @@
 import * as React from "react"
 import Svg, { Defs, ClipPath, Path, G } from "react-native-svg"
 
-function FrshBitesIcon({color,props}) {
+function FrshBitesIcon({color,size,props}) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
-      width={28}
-      height={31}
+      width={size}
+      height={size}
       viewBox="0 0 28 31"
       {...props}
     >

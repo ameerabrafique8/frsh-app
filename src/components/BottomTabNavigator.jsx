@@ -1,4 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { RFValue } from 'react-native-responsive-fontsize';
 import FrshBites from '../screens/frshBites/frshBites';
 import Alerts from '../screens/frshBites/alerts';
 import Account from '../screens/frshBites/account';
@@ -19,7 +20,8 @@ const BottomTabNavigator = () => {
     <View style={styles.container}>
       <Tab.Navigator
         screenOptions={{ headerTitle: '',tabBarActiveTintColor: 'black',
-          tabBarStyle: {height: 80,
+          tabBarStyle: {
+          height: 80,
           justifyContent: 'center',
           alignItems: 'center',
           borderTopWidth: 2,
@@ -33,7 +35,7 @@ const BottomTabNavigator = () => {
           shadowRadius: 4,
           backgroundColor: 'white'},
           animationEnabled: false, swipeEnabled: false,
-          tabBarLabelStyle: { color: 'black',fontSize: 12, fontWeight:'500', paddingBottom:17 }
+          tabBarLabelStyle: { color: 'black',fontSize: RFValue(12), fontWeight:'500', paddingBottom:17 }
         }}
 
       >
@@ -43,7 +45,7 @@ const BottomTabNavigator = () => {
           options={{
             tabBarIcon: ({ focused }) => (
               <View>
-                <FrshBitesIcon color={focused ? '#ff4e00' : 'black'} />
+                <FrshBitesIcon size={28} color={focused ? '#ff4e00' : 'black'} />
               </View>
             ),
           }}
@@ -61,12 +63,12 @@ const BottomTabNavigator = () => {
           }}
         />
         <Tab.Screen
-          name="Favourites"
+          name="Favorites"
           component={Favourites}
           options={{
             tabBarIcon: ({ focused }) => (
               <View>
-                <FavouritesIcon color={focused ? '#ff4e00' : 'black'}/>
+                <FavouritesIcon color='white' borderColor={focused ? '#ff4e00' : 'black'}/>
               </View>
             ),
           }}

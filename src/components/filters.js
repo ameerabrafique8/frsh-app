@@ -1,1 +1,1 @@
-export const filters = ['Filter','All', 'Bakery', 'Pizza', 'Fast Food', 'Burger', 'Pasta']
+export const filters = ['Filter','All', 'Bakery', 'Pizza', 'Burger', 'Pasta']
